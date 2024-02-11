@@ -3,3 +3,4 @@ gunicorn==21.2.0
 beautifulsoup4==4.11.1
 requests
 selenium==4.11.2
+webdriver-manager
