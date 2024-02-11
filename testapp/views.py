@@ -1,14 +1,21 @@
 from django.shortcuts import render
 from bs4 import BeautifulSoup
 import requests
+import selenium
+from selenium import webdriver
+
 
 
 def index(request):
 
-    page = requests.get('http://www.google.com')
-  
-    summary_soup = BeautifulSoup(page.content, "html.parser")
-    print(summary_soup)
+
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument('headless')
+    driver = webdriver.Chrome(options=chrome_options)
 
 
-    return render(request, 'index.html', {'test': summary_soup})
+    url = 'https://www.google.com'
+    driver.get(url)
+    test = driver.page_source
+
+    return render(request, 'index.html', {'test': test})
