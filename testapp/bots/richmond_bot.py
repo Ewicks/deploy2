@@ -13,6 +13,7 @@ import os
 
 
 def richmond_bot(startdate, enddate, wordlist):
+    print('lol')
 
     def format_address(addresss):
         formatted_address = addresss.replace('\n', ' ')
