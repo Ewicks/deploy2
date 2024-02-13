@@ -1,0 +1,72 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<div class="row bg-gray">
+  <div
+    class="col-6 d-flex justify-content-center align-items-center gap-3 flex-column">
+   
+    <div class="points-container">
+        <div class="points-content">
+            <h1 class="mt-5 mb-0 login-title fw-bold">Welcome to Bot Search</h1>
+            <p class="my-5 small text-gray">asda sd asd</p>
+            <div
+            class="bullet-points flex-column d-flex justify-content-center align-items-start gap-3"
+          >
+            <div class="contact-point">
+              <i class="fa-solid fa-check text-green"></i>
+              <p class="contact-p-margin">this oaisdoai jdoi ajsd</p>
+            </div>
+            <div class="contact-point">
+              <i class="fa-solid fa-check text-green"></i>
+              <p class="contact-p-margin">this oaisdoai jdoi ajsd</p>
+            </div>
+            <div class="contact-point">
+              <i class="fa-solid fa-check text-green"></i>
+              <p class="contact-p-margin">this oaisdoai jdoi ajsd</p>
+            </div>
+            <div class="contact-point">
+              <i class="fa-solid fa-check text-green"></i>
+              <p class="contact-p-margin">this oaisdoai jdoi ajsd</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+   
+  <div class="col-6 d-flex justify-content-center align-items-center">
+    <div class="form-container">
+      <form
+        class="login-form d-flex justify-content-center align-items-start"
+        method="POST"
+      >
+        <div class="login-form-content">
+          {% csrf_token %}
+          <h2 class="mt-5">Welcome back</h2>
+          <p class="boldness mb-5">asdasd asd s</p>
+          <div class="mb-4 text-light">
+            <input
+              placeholder="username"
+              type="text"
+              class="form-control"
+              name="username"
+            />
+          </div>
+          <div class="mb-5 text-light">
+            <input
+              placeholder="password"
+              type="password"
+              class="form-control"
+              name="password"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary login-form-btn">
+            Log In
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
