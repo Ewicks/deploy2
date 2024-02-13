@@ -45,19 +45,13 @@
                             <span aria-hidden="true"><span class="header-num">04</span></span>Reviews
                         </a>
                     </li>
-                    {% if user.is_authenticated %}
+                   
                     <li class="active">
-                        <a href="{% url 'logout' %}" class="btn login-btn">
-                            Log Out
+                        <a href="{% url 'login' %}" class="btn login-btn">
+                            Log In
                         </a>
                     </li>
-                    {% else %}
-                        <li class="active">
-                            <a href="{% url 'login' %}" class="btn login-btn">
-                                Log In
-                            </a>
-                        </li>
-                    {% endif %}
+               
                  
                 </ul>
             </nav>
