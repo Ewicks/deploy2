@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="primary-header d-flex">
+            <div>
+                <a href="{% url 'home' %}">
+                    <h3 class="logo-p m-0"><span class="colored-word">Bot</span>Search</h3>
+                </a>
+            </div>
+    
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <i id="burgar-menu" class="fa-solid fa-bars"></i>
+            </button>
+    
+            <nav>
+                <ul id="primary-navigation" data-visable="false" class="primary-navigation flex m-0">
+                    <li class="active">
+                        <a href="{% url 'pricing' %}">
+                            <span aria-hidden="true"><span class="header-num">01</span></span>Pricing
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="{% url 'about' %}">
+                            <span aria-hidden="true"><span class="header-num">02</span></span>About Us
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="{% url 'contact' %}">
+                            <span aria-hidden="true"><span class="header-num">03</span></span>Contact Us
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="{% url 'reviews' %}">
+                            <span aria-hidden="true"><span class="header-num">04</span></span>Reviews
+                        </a>
+                    </li>
+                 
+                </ul>
+            </nav>
+        </header>
+
+
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>{{ message }}</strong> You should check in on some of those fields below.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+
+
+
+        <footer class="">
+            <div class="container">
+                <div class="row py-5">
+                    <div class="col">
+                        <div class="footer-section text-center">
+                            <a href="">
+                                <h2>title</h2>
+                            </a>
+                            <a href="">
+                                <p>title</p>
+                            </a>
+                            <a href="">
+                                <p>title</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="footer-section text-center">
+                            <a href="">
+                                <h2>title</h2>
+                            </a>
+                            <a href="">
+                                <p>title</p>
+                            </a>
+                            <a href="">
+                                <p>title<p>
+                            </a>
+                            <a href="">
+                                <p>title<p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="footer-section text-center">
+                            <a href="">
+                                <h2>title</h2>
+                            </a>
+                            <a href="">
+                                <p>title</p>
+                            </a>
+                            <a href="">
+                                <p>title</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="footer-line"></div>
+            <p class="my-3 mx-4">Bot Search<sup>&#169;</sup></p>
+            
+        </footer>
+    </div>
+    
+
+    <script src="https://kit.fontawesome.com/b2fe83387a.js" crossorigin="anonymous"></script>
+    {% block js %}
+    <script>
+        const primaryNav = document.querySelector('.primary-navigation');
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+        const icon = document.querySelector('#burgar-menu');
+
+
+        navToggle.addEventListener('click', () => {
+            const visibility = primaryNav.getAttribute('data-visable')
+
+            if (visibility === 'false') {
+                icon.classList.replace('fa-bars', 'fa-xmark')
+                primaryNav.setAttribute('data-visable', true)
+                navToggle.setAttribute('aria-expanded', true)
+            } else if (visibility === 'true') {
+                icon.classList.replace('fa-xmark', 'fa-bars')
+                primaryNav.setAttribute('data-visable', false)
+                navToggle.setAttribute('aria-expanded', false)
+
+            }
+        })
+    </script>
+    {% endblock %}
+
+</body>
+</html>

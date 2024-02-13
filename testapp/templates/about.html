@@ -1,0 +1,92 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<div class="container-fluid p-0 bg-home">
+  <div class="row">
+    <div class="col text-center my-5">
+      <h1><span class="key-word about-title">About Us</span></h1>
+      <p class="my-5 text-light">
+        We provide custom data-driven solutions for SMBs, evolving efficiency with
+        revenue growth and cost reduction.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div
+      class="col d-flex justify-content-center align-items-center gap-5 flex-wrap"
+    >
+      <div class="statistics">
+        <h1><span class="key-word">7</span></h1>
+        <p class="text-light">years in business</p>
+      </div>
+      <div class="statistics">
+        <h1><span class="key-word">250+</span></h1>
+        <p class="text-light">Completed projects</p>
+      </div>
+      <div class="statistics">
+        <h1><span class="key-word">260+</span></h1>
+        <p class="text-light">In-house employees</p>
+      </div>
+      <div class="statistics">
+        <h1><span class="key-word">200+</span></h1>
+        <p class="text-light">Satisfied clients</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="about-section-two container-fluid p-0">
+    <div class="border-seperate"></div>
+    <h1 class="text-center my-5 about-title">
+      <span class="key-word">Why choose us?</span>
+    </h1>
+  
+    <div class="row my-5">
+      <div
+        class="col-md-6 col-sm-12 d-flex justify-content-start align-items-center flex-column px-5"
+      >
+        <h1 class="">The leading data scraping company</h1>
+        <p class="about-p">
+          At ScrapingPros, we are committed to providing custom web scraping
+          services and solutions that meet your needs. Our team is comprised of
+          experienced professionals who understand how to work with data and
+          technology in order to deliver precise results.
+        </p>
+      </div>
+      <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+        <img
+          src="{% static 'images/about-img.png' %}"
+          class="img-fluid about-img"
+          alt=""
+        />
+      </div>
+    </div>
+  
+    <div class="row my-5">
+      <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+        <img
+          src="{% static 'images/about-img2.png' %}"
+          class="img-fluid about-img"
+          alt=""
+        />
+      </div>
+      <div
+        class="col-md-6 col-sm-12 d-flex justify-content-start align-items-center flex-column px-5"
+      >
+        <h1>The leading data scraping company</h1>
+        <p class="about-p">
+          At ScrapingPros, we are committed to providing custom web scraping
+          services and solutions that meet your needs. Our team is comprised of
+          experienced professionals who understand how to work with data and
+          technology in order to deliver precise results.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<script
+  src="https://kit.fontawesome.com/b2fe83387a.js"
+  crossorigin="anonymous"
+></script>
+{% endblock %}

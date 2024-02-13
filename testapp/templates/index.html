@@ -1,25 +1,84 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'images/world.png' %}">
-</head>
-<body>
-    <h1 class="test">jiijiji</h1>
-    <h1>jiijiji</h1>
-    <h1>jiijiji</h1>
-    <h1>jiijiji</h1>
-    <h1>jiijiji</h1>
-    <h1>jiijiji</h1>
-    <h1>jiijiji</h1>
-    <h1>jiijiji</h1>
-    <p class="test">asdas</p>
-    {{ test }}
+{% block content %}
 
-    <img src="{% static 'images/world.png' %}" alt="">
-</body>
-</html>
+<div class="container-fluid">
+    <div class="row p-5 bg-home">
+        <div class="col-md-6 col-sm-12 mt-3 flex-column text-light d-flex justify-content-center align-items-start">
+            <h1 class="">Unlock the<br><span class="key-word">Power of Data</span> for Your Business</h1>
+            <p class="subtitle">Borough bot search is your intelligent assistant for gathering valuable insights about<span class="colored-word-subtitle">potential clients.</span> Our bot scours the web to provide</p>
+            <a href="{% url 'contact' %}" class=" my-4 btn home-btn d-flex align-items-center justify-content-center position-relative">Contact Us <span class="arrow"><i class="fa-solid fa-arrow-right position-absolute"></i></span></a>
+            <h3 class="my-4">Why Choose Us?</h3>
+            <div class="bullet-points flex-column d-flex justify-content-center align-items-start gap-3">
+                <div class="point">
+                    <i class="fa-solid fa-check"></i>
+                    <p class="p-margin">Legal Compliance</p>
+                </div>
+                <div class="point">
+                    <i class="fa-solid fa-check"></i>
+                    <p class="p-margin">Over 15 Years of Expertise – Endorsed by Industry Experts</p>
+                </div>
+                <div class="point">
+                    <i class="fa-solid fa-check"></i>
+                    <p class="p-margin">Flexible, Scalable and Custom Data Scraping Services</p>
+                </div>
+                <div class="point">
+                    <i class="fa-solid fa-check"></i>
+                    <p class="p-margin">Tailored Data Delivery: How you want it, when you want it.</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+                <a href="#services" class="btn home-btns">Our services</a>
+            </div>
+        </div>
+        <div class="col-md-6 d-none d-sm-block flex-column text-light d-flex justify-content-center align-items-start p-0">
+            <img src="{% static 'images/business-growth.png' %}" class='home-img img-fluid' alt="">
+        </div>
+    </div>
+</div>
+
+    
+<div class="container-fluid home-section-two">
+    <div id="services">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center mt-5">Discover Our Data Services</h1>
+                <p class="mt-3 mb-5 text-center">jasodj oasij doaisdj aosd jiaos doajs doaisj doaijsd oiajsdoaisd </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex my-5 justify-content-center align-items-center gap-4 flex-wrap">
+                <div class="card text-center">
+                    <h1 class="card-title">tset</h1>
+                    <p>ajsdouiasdj iaujdsiausdhj iausdhjaisudhadsihasidu h</p> <br>
+                    <p>ajnsd asjd uahisud hjaisud hiadsuhiasu dhaisdu haisdu</p>
+                    <div class="buttons mt-3">
+                        <button class="home-btns btn">button</button>
+                        <button class="home-btns btn">button</button>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <h1 class="card-title">test</h1>
+                    <p> ahsdiua hsdi uahsid uahsdiua hiasu haisudhaisudhai u</p> <br>
+                    <p>ajkhda shdia ushdia sudhiasu dhaisdu haisdu hasdihu asi</p>
+                    <div class="buttons mt-3">
+                        <button class="home-btns btn">button</button>
+                        <button class="home-btns btn">button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+</div>
+    
+
+
+
+
+<script
+  src="https://kit.fontawesome.com/b2fe83387a.js"
+  crossorigin="anonymous"
+></script>
+{% endblock %}
