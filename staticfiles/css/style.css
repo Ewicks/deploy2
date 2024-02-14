@@ -132,6 +132,10 @@ header {
 
 /* Home page*/
 
+.num {
+    color: rgb(138, 84, 255);
+}
+
 .fa-arrow-right {
     top: 19px;
     right: 20px;
@@ -491,18 +495,22 @@ span i {
 
 .card {
     width: 400px;
-    height: 300px;
+    height: 400px;
     border-radius: 10px;
     background-color: #fff;
     padding: 10px 40px;
     transition: transform 750ms;
     font-weight: 500;
     color: #5e5c5c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-title {
     font-weight: 600;
     color: black;
+    font-size: 30px;
 }
 
 .card:hover {
