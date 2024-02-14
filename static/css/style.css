@@ -407,6 +407,7 @@ table tr:nth-child(even) {
     color: white;
 }
 
+
 .key-word {
     /* background-color: rgb(131, 31, 231); */
     font-weight: 600;
@@ -608,6 +609,45 @@ span i {
     padding: 0px 30px;
 }
 
+.quote-line {
+    position: absolute;
+    border: 3px solid white;
+    top: 23px;
+    left: 112px;
+    width: 100px;
+
+}
+
+.quote-title {
+    margin-left: 130px;
+    color: white;
+}
+
+.quote-text {
+    color: white;
+}
+
+.quote-btn {
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 2px 10px;
+    margin: 0;
+}
+
+.quote-container {
+    margin-left: 100px;
+}
+
+.quote-btn:hover {
+    background-color: rgba(255, 255, 255, .5);
+    color: white;
+}
+
+
+.bg-quote {
+    background-color: #1C1D2B;
+}
 
 /* About Page */
 
@@ -864,6 +904,19 @@ tr:hover {
         padding: 20px;
     }
 
+}
+
+@media (max-width: 673px) {
+    .quote-line {
+        display: none;
+    }
+    .quote-title {
+        margin: 0px;
+    }
+
+    .quote-container {
+        margin: 0px;
+    }
 }
 
 .bot-title {
