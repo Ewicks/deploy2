@@ -927,6 +927,10 @@ tr:hover {
     margin: 10px 0px;
 }
 
+.footer-section a:hover {
+    color: rgb(138, 84, 255);
+}
+
 @media (max-width: 767px) {
     .contact-img {
         height: 50%;
@@ -949,6 +953,18 @@ tr:hover {
     .home-img {
         display: none;
     }
+
+ 
+
+
+
+}
+
+@media (max-width: 575px) {
+    .flex-row-footer {
+        align-items: center !important;
+        margin-top: 20px;
+    } 
 
 }
 
