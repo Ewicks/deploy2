@@ -18,6 +18,7 @@ body {
     border: 1px solid rgb(138, 84, 255);
     padding: 10px 15px;
     border-radius: 20px;
+    color: white;
 }
 
 .number-btn:hover {
@@ -28,7 +29,7 @@ body {
 .wrapper {
     box-sizing: border-box;
     position: relative;
-    padding-bottom: 20em; /* Height of footer */
+    padding-bottom: 44em; /* Height of footer */
     min-height: 100vh;
 }
 
@@ -37,6 +38,7 @@ footer {
     bottom: 0;
     width: 100%;
     color: #fff;
+    background-color: #160B28;
 }
 /* Header */
 
@@ -81,9 +83,9 @@ header {
     display: none;
 }
 
-.active {
+/* .active {
     margin: auto 0px;
-}
+} */
 
 .point i {
     position: absolute;
@@ -514,7 +516,7 @@ span i {
 
 .card {
     width: 400px;
-    height: 400px;
+    height: 480px;
     border-radius: 10px;
     background-color: #fff;
     padding: 10px 40px;
@@ -639,7 +641,7 @@ span i {
     color: white;
     border: 2px solid white;
     border-radius: 10px;
-    padding: 2px 10px;
+    padding: 5px 10px;
     margin: 0;
 }
 
@@ -656,6 +658,13 @@ span i {
 .bg-quote {
     background-color: #1C1D2B;
 }
+
+.quote-hr {
+    border: 1px solid rgb(138, 84, 255);
+    width: 100%;
+    padding: 0px 10px;
+}
+
 
 /* About Page */
 
@@ -897,6 +906,27 @@ tr:hover {
     margin-top: 30px;
 }
 
+.footer-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: bottom;
+}
+.demo-text {
+    color: rgb(138, 84, 255);
+}
+
+.footer-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-section a {
+    color: white;
+    margin: 10px 0px;
+}
+
 @media (max-width: 767px) {
     .contact-img {
         height: 50%;
@@ -910,6 +940,14 @@ tr:hover {
 
     .about-img {
         padding: 20px;
+    }
+
+    .wrapper {
+        padding-bottom: 55em;
+    }
+
+    .home-img {
+        display: none;
     }
 
 }
