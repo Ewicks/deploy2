@@ -6,6 +6,8 @@ body {
     font-weight: 300;
     margin: 0;
     height: 100%;
+    background: linear-gradient(177.21deg, rgb(40 138 195 / 24%) 3.65%, rgb(54 7 113 / 0%) 40.32%), linear-gradient(245.93deg, rgb(123 166 217 / 16%) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgb(53 19 225 / 0%) 29.79%, rgba(98, 19, 255, 0.01) 85.72%), #13111C;
+
     /* background: linear-gradient(327.21deg, rgba(33, 0, 75, 0.24) 3.65%, rgba(60, 0, 136, 0) 40.32%), linear-gradient(245.93deg, rgba(209, 21, 111, 0.16) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgba(58, 19, 255, 0) 29.79%, rgba(98, 19, 255, 0.01) 85.72%), #13111C !important; */
     /* background: linear-gradient(to bottom,white, #c3faec, white); */
     /* background-image: linear-gradient(45deg, rgb(138, 84, 255), rgb(173 145 194)); */
@@ -29,7 +31,6 @@ footer {
 /* Header */
 
 header {
-    background-color: #090B10;
     height: 70px;
 }
 

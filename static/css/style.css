@@ -14,6 +14,17 @@ body {
     /* background-image: linear-gradient(45deg, rgb(138, 84, 255), rgb(173 145 194)); */
 }
 
+.number-btn {
+    border: 1px solid rgb(138, 84, 255);
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.number-btn:hover {
+    color: white;
+    background-color: rgba(138, 84, 255, .5);
+}
+
 .wrapper {
     box-sizing: border-box;
     position: relative;
