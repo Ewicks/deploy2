@@ -7,7 +7,22 @@ body {
     margin: 0;
     height: 100%;
     background: linear-gradient(177.21deg, rgb(40 138 195 / 24%) 3.65%, rgb(54 7 113 / 0%) 40.32%), linear-gradient(245.93deg, rgb(123 166 217 / 16%) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgb(53 19 225 / 0%) 29.79%, rgba(98, 19, 255, 0.01) 85.72%), #13111C;
-    /* background: linear-gradient(177.21deg, rgb(108 40 195 / 24%) 3.65%, rgba(60, 0, 136, 0) 40.32%), linear-gradient(245.93deg, rgb(45 23 221 / 16%) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgba(58, 19, 255, 0) 29.79%, rgba(98, 19, 255, 0.01) 85.72%), #13111C; */
+
+    /* background-image: linear-gradient(327.21deg, rgba(33, 0, 75, 0.24) 3.65%, rgba(60, 0, 136, 0) 40.32%), linear-gradient(245.93deg, rgba(209, 21, 111, 0.16) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgba(58, 19, 255, 0) 29.79%, rgba(98, 19, 255, 0.01) 85.72%), #13111C; */
+    /* background: linear-gradient(327.21deg, rgba(33, 0, 75, 0.24) 3.65%, rgba(60, 0, 136, 0) 40.32%), linear-gradient(245.93deg, rgba(209, 21, 111, 0.16) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgba(58, 19, 255, 0) 29.79%, rgba(98, 19, 255, 0.01) 85.72%), #13111C !important; */
+    /* background: linear-gradient(to bottom,white, #c3faec, white); */
+    /* background-image: linear-gradient(45deg, rgb(138, 84, 255), rgb(173 145 194)); */
+}
+
+.number-btn {
+    border: 1px solid rgb(138, 84, 255);
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.number-btn:hover {
+    color: white;
+    background-color: rgba(138, 84, 255, .5);
 }
 
 .wrapper {
@@ -22,11 +37,11 @@ footer {
     bottom: 0;
     width: 100%;
     color: #fff;
-    background-color: #000;
 }
 /* Header */
 
 header {
+    /* background-color: #090B10; */
     height: 70px;
 }
 
@@ -392,9 +407,10 @@ table tr:nth-child(even) {
 .bg-home {
     /* background-color: #070B14; */
     /* background: linear-gradient(327.21deg, rgb(108 40 195 / 24%) 3.65%, rgba(60, 0, 136, 0) 40.32%), linear-gradient(245.93deg, rgb(45 23 221 / 16%) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgba(58, 19, 255, 0) 29.79%, rgba(98, 19, 255, 0.01) 85.72%), #13111C; */
-
+    /* background: linear-gradient(177.21deg, rgb(40 138 195 / 24%) 3.65%, rgb(54 7 113 / 0%) 40.32%), linear-gradient(245.93deg, rgb(123 166 217 / 16%) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgb(53 19 225 / 0%) 29.79%, rgba(98, 19, 255, 0.01) 85.72%), #13111C; */
     color: white;
 }
+
 
 .key-word {
     /* background-color: rgb(131, 31, 231); */
@@ -456,6 +472,9 @@ span i {
     margin: 10px;
 }
 
+.f-color {
+    color: purple !important;
+}
 
 .subtitle {
     margin-right: 20%;
@@ -509,8 +528,8 @@ span i {
 
 .card-title {
     font-weight: 600;
-    color: black;
     font-size: 30px;
+    color: black;
 }
 
 .card:hover {
@@ -598,6 +617,45 @@ span i {
     padding: 0px 30px;
 }
 
+.quote-line {
+    position: absolute;
+    border: 3px solid white;
+    top: 23px;
+    left: 112px;
+    width: 100px;
+
+}
+
+.quote-title {
+    margin-left: 130px;
+    color: white;
+}
+
+.quote-text {
+    color: white;
+}
+
+.quote-btn {
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 2px 10px;
+    margin: 0;
+}
+
+.quote-container {
+    margin-left: 100px;
+}
+
+.quote-btn:hover {
+    background-color: rgba(255, 255, 255, .5);
+    color: white;
+}
+
+
+.bg-quote {
+    background-color: #1C1D2B;
+}
 
 /* About Page */
 
@@ -854,6 +912,19 @@ tr:hover {
         padding: 20px;
     }
 
+}
+
+@media (max-width: 673px) {
+    .quote-line {
+        display: none;
+    }
+    .quote-title {
+        margin: 0px;
+    }
+
+    .quote-container {
+        margin: 0px;
+    }
 }
 
 .bot-title {
