@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap');
 
+
 /* Base.html */
 body {
     font-family: 'Montserrat', sans-serif;
@@ -67,6 +68,9 @@ header {
     padding: 0;
     margin: 0;
     white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .primary-navigation a {
@@ -140,12 +144,6 @@ header {
     }
 }
 
-@media (min-width: 35em) {
-    .primary-navigation {
-        padding-block: 2rem;
-        padding-inline: clamp(3rem, 5vw, 10rem);
-    }
-}
 
 /* Home page*/
 
@@ -512,6 +510,7 @@ span i {
     margin: 0px 10px;
     padding: 2px 5px;
     margin: 0;
+    font-weight: 500;
 }
 
 .card {
@@ -1019,9 +1018,7 @@ tbody tr td {
 /* Updated CSS */
 
 /* Background color */
-.bg-gray {
-    background-color: purple;
-}
+
 
 /* Cube color */
 .face::before {
