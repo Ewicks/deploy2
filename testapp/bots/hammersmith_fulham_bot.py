@@ -50,7 +50,6 @@ def hammersmith_fulham_bot(startdate, enddate, wordlist):
     reversed_startdate = parsed_startdate.strftime('%d/%m/%Y')
     reversed_enddate = parsed_enddate.strftime('%d/%m/%Y')
     print(reversed_startdate)
-    # list_of_dates = split_dates(reversed_startdate, reversed_enddate)
 
 
     # Set up the WebDriver (you may need to provide the path to your chromedriver executable)

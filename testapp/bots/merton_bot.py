@@ -67,6 +67,9 @@ def merton_bot(startdate, enddate, wordlist):
 
     url = 'https://planning.merton.gov.uk/Northgate/PlanningExplorerAA/GeneralSearch.aspx'
     driver.get(url)
+    cookies = driver.get_cookies()
+    cookies_dict = {cookie['name']: cookie['value'] for cookie in cookies}
+    print(cookies_dict)
 
     # Input start and end dates
     input_element1 = driver.find_element(By.ID, 'dateStart')
@@ -119,20 +122,25 @@ def merton_bot(startdate, enddate, wordlist):
             a_tag = row.find('a')
             href_value = a_tag.get('href')
             next_url = (f'{base_url}{href_value}')
-            cookies = {"MVMSession":"ID=c721a245-35e4-4b40-ba1d-b947403f27da"}
+            # cookies = {"MVMSession":"ID=c721a245-35e4-4b40-ba1d-b947403f27da"}
+            # cookies = {"ar_debug":"1"}
             # cookies = {"_ga_ZNLJF35KPL":"GS1.1.1706998240.1.0.1706998240.0.0.0"}
-            summary_page = requests.get(next_url, cookies=cookies, verify=False)
-            # summary_page = requests.get(
-            #     url='https://app.scrapingbee.com/api/v1/',
-            #     cookies= {"_ga_ZNLJF35KPL":"GS1.1.1706998240.1.0.1706998240.0.0.0"},
+            # summary_page = requests.get(next_url, verify=False)
 
-            #     params={
-            #         'api_key': API_KEY,
-            #         'url': next_url,  
-            #     },
-            # )
+            # summary_page = requests.get(next_url, cookies=cookies_dict, verify=False)
+            summary_page = requests.get(
+                url='https://app.scrapingbee.com/api/v1/',
+                cookies=cookies_dict,
+
+                params={
+                    'api_key': API_KEY,
+                    'url': next_url,  
+                },
+            )
             next_page_soup = BeautifulSoup(summary_page.content, "html.parser")
+            print(next_page_soup)
             applicant_sections = next_page_soup.find_all('ul', class_='list')
+            print(applicant_sections)
             sections = applicant_sections[1]
             applicant_span = sections.find('span', text='Applicant')
             parent_div = applicant_span.find_parent('div')
