@@ -783,6 +783,7 @@ span i {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .points-container {
@@ -1013,3 +1014,112 @@ tbody tr td {
 .pagination li {
     margin: 0px 5px;
 }
+
+
+/* Updated CSS */
+
+/* Background color */
+.bg-gray {
+    background-color: purple;
+}
+
+/* Cube color */
+.face::before {
+    background: purple;
+    opacity: 0.4;
+}
+
+/* Ground shadow color */
+.shadow {
+    background: purple;
+    box-shadow: 0 0 30px 10px rgba(128, 0, 128, 0.4);
+}
+
+/* 3D Cube */
+.cube {
+    display: grid;
+    aspect-ratio: 1;
+    width: var(--size);
+    transform: rotateX(70deg) rotateZ(45deg);
+    transform-style: preserve-3d;
+    visibility: hidden;
+    --size: 200px;
+    --offset: calc(var(--size) * 0.499);
+}
+
+.cube .face {
+    aspect-ratio: 1;
+}
+
+.face {
+    display: grid;
+    grid-area: 1 / -1;
+    aspect-ratio: 1;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    visibility: initial;
+    transition: transform 60ms;
+}
+
+.face:nth-child(1) { transform: translateZ(var(--offset)) }
+.face:nth-child(2) { transform: rotateX(0.25turn) rotateZ(0.50turn) translateZ(var(--offset)) }
+.face:nth-child(3) { transform: rotateY(0.25turn) rotateZ(0.75turn) translateZ(var(--offset)) }
+.face:nth-child(4) { transform: rotateX(0.75turn) translateZ(var(--offset)) }
+.face:nth-child(5) { transform: rotateY(0.75turn) rotateZ(0.25turn) translateZ(var(--offset)) }
+.face:nth-child(6) { transform: rotateY(0.50turn) translateZ(var(--offset)) }
+
+/* Shadow (Ground Contact) */
+.shadow {
+    content: '';
+    grid-area: 1 / -1;
+    background: purple;
+    transform: translateZ(calc(var(--offset) * -1));
+    box-shadow: 0 0 30px 10px rgba(128, 0, 128, 0.4);
+    opacity: 0.15;
+    visibility: initial;
+}
+
+/* Lighting */
+.face::before {
+    content: '';
+    background: black;
+    opacity: 0.4;
+    transform: scale(1.002);
+    backface-visibility: hidden;
+}
+
+.face:nth-child(1)::before { opacity: 0; }
+.face:nth-child(2)::before { opacity: 0.2; }
+.face:nth-child(3)::before { opacity: 0.1; }
+.face:nth-child(4)::before { opacity: 0.3; }
+.face:nth-child(5)::before { opacity: 0.4; }
+.face:nth-child(6)::before { opacity: 0.6; }
+
+/* Animated Cube */
+.cube {
+    animation: turn 16s linear infinite;
+}
+
+@keyframes turn {
+    from { transform: rotateX(70deg) rotateZ(0turn); }
+    to { transform: rotateX(70deg) rotateZ(1turn); }
+}
+
+/* Animated Lighting */
+.face:nth-child(2)::before,
+.face:nth-child(3)::before,
+.face:nth-child(4)::before,
+.face:nth-child(5)::before {
+    animation: turn-lighting 16s linear infinite;
+}
+
+@keyframes turn-lighting {
+    0% { opacity: 0.3; animation-timing-function: cubic-bezier(0.47, 0, 0.75, 0.72) }
+    50% { opacity: 0.01; animation-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1) }
+    100% { opacity: 0.3; }
+}
+
+.face:nth-child(2)::before { animation-delay: 0s; }
+.face:nth-child(3)::before { animation-delay: -4s; }
+.face:nth-child(4)::before { animation-delay: -8s; }
+.face:nth-child(5)::before { animation-delay: -12s; }
