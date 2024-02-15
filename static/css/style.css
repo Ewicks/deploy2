@@ -101,11 +101,15 @@ header {
     color: rgb(131, 31, 231) !important;
 }
 
-@media (max-width: 707px) {
+.primary-navigation a:hover {
+    color: rgb(138, 84, 255);
+}
+
+@media (max-width: 940px) {
     .primary-navigation {
         gap: 3rem;
         position: fixed;
-        inset: 0 0 0 30%;
+        inset: 0 0 0 40%;
         flex-direction: column;
         padding: min(30vh, 10rem) 2em;
         background: #f0f0f0; /* Solid gray background color */
@@ -151,7 +155,7 @@ header {
     }
 }
 
-@media (min-width: 35em) and (max-width: 55em){
+@media (max-width: 1000px){
     .primary-navigation a > span[aria-hidden] {
         display: none;
     }
