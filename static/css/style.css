@@ -911,6 +911,26 @@ tr:hover {
 
 }
 
+.item-row {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.item-row span {
+    margin-right: 10px; /* Add some space between the text and the button */
+}
+
+/* Position the "x" icon to the right */
+.item-row .text-decoration {
+    margin-left: auto; /* Move the icon to the right */
+}
+  
+
+
+.results-height{
+    min-height: 100vh;
+}
+
 .footer-img {
     width: 100%;
     height: 300px;

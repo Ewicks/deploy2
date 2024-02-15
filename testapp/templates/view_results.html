@@ -14,12 +14,12 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
-  <body class="bg-white">
+  <body class="bg-white results-height">
     <center>
      
       <div class="container">
-        <h2 class="my-5 text-start">
-          Results for {{ scrape_instance.borough }} - {{ scrape_instance.startdate}} to {{ scrape_instance.enddate }}
+        <h2 class="my-5 text-center">
+          Results for {{ scrape_instance.borough }} borough <br> <br>{{ scrape_instance.startdate}} / {{ scrape_instance.enddate }}
         </h2>
         <p class="mt-5">Number of Results: {{ num_results }}</p>
         <h2>Select Number Of Rows</h2>

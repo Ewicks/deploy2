@@ -58,6 +58,12 @@
                   {% for word in words %}
                   <div class="item-row">
                     <span>{{word}}</span>
+                    <a
+                      class="mx-1 text-decoration"
+                      href="{% url 'deleteword' pk=word.id redirect_to='richmond' %}"
+                    >
+                      <i class="fa-solid fa-xmark"></i>
+                    </a>
                   </div>
                   {% endfor %}
                 </div>
@@ -70,7 +76,7 @@
           <div class="col d-flex justify-content-center align-items-center">
             <form
               method="POST"
-              action="{% url 'results' %}"
+              action="{% url 'bots' %}"
               class="d-flex flex-column align-items-center"
               id="botForm"
             >

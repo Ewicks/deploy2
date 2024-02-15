@@ -57,13 +57,13 @@
                 <div class="d-flex justify-content-evenly">
                   {% for word in words %}
                   <div class="item-row">
+                    <span>{{word}}</span>
                     <a
                       class="mx-1 text-decoration"
-                      href="{% url 'deleteword' pk=word.id redirect_to='kingston' %}"
+                      href="{% url 'deleteword' pk=word.id redirect_to='richmond' %}"
                     >
                       <i class="fa-solid fa-xmark"></i>
                     </a>
-                    <span>{{word}}</span>
                   </div>
                   {% endfor %}
                 </div>

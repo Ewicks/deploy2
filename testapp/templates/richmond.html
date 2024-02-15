@@ -31,7 +31,6 @@
           </div>
           <div class="col">
             <h1 class="mt-5 text-center">Richmond Council</h1>
-            <h1 class="text-center gradient-text">Enter details here</h1>
           </div>
           <div class="col"></div>
         </div>
@@ -57,13 +56,13 @@
                 <div class="d-flex justify-content-evenly">
                   {% for word in words %}
                   <div class="item-row">
+                    <span>{{word}}</span>
                     <a
                       class="mx-1 text-decoration"
                       href="{% url 'deleteword' pk=word.id redirect_to='richmond' %}"
                     >
                       <i class="fa-solid fa-xmark"></i>
                     </a>
-                    <span>{{word}}</span>
                   </div>
                   {% endfor %}
                 </div>
