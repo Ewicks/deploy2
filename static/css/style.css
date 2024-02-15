@@ -91,8 +91,13 @@ header {
     margin: auto 0px;
 } */
 
+.point {
+    display: flex;
+    align-items: center;
+}
+
 .point i {
-    position: absolute;
+    margin-right: 8px;
     color: rgb(131, 31, 231) !important;
 }
 
@@ -103,11 +108,19 @@ header {
         inset: 0 0 0 30%;
         flex-direction: column;
         padding: min(30vh, 10rem) 2em;
-        background: hsl(0 0% 100% / 0.1);
-        backdrop-filter: blur(.5em);
+        background: #f0f0f0; /* Solid gray background color */
         z-index: 1000;
         transform: translateX(100%);
         transition: transform 350ms ease-out;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .primary-navigation a {
+        color: black;
+        font-weight: 600;
+
     }
 
     .primary-navigation[data-visable='false'] {
