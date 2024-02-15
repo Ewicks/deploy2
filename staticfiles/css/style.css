@@ -895,7 +895,7 @@ tr:hover {
     color: white !important;
     font-size: 15px;
 }
-
+ 
 .contact-img {
     height: 100%;
     object-fit: contain;
@@ -909,6 +909,26 @@ tr:hover {
 .view-element:hover {
     text-decoration: underline;
 
+}
+
+.item-row {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.item-row span {
+    margin-right: 10px; /* Add some space between the text and the button */
+}
+
+/* Position the "x" icon to the right */
+.item-row .text-decoration {
+    margin-left: auto; /* Move the icon to the right */
+}
+  
+
+
+.results-height{
+    min-height: 100vh;
 }
 
 .footer-img {
