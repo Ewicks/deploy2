@@ -72,6 +72,7 @@
               method="POST"
               action="{% url 'results' %}"
               class="d-flex flex-column align-items-center justify-content-center"
+              id="botForm"
             >
               {% csrf_token %}
               <div class="d-flex justify-content-center align-items-center">
@@ -90,6 +91,9 @@
           ></div>
         </div>
       </div>
+    </div>
+    <div id="loading-overlay">
+      <div class="loading-spinner"></div>
     </div>
   </body>
 </html>

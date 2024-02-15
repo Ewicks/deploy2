@@ -100,13 +100,11 @@
     
 
     <script>
-      console.log('hi')
+    
       document.getElementById('botForm').addEventListener('submit', function() {
         // Show loading overlay when the form is submitted
         document.getElementById('loading-overlay').style.display = 'block';
 
-        // Prevent further interactions by disabling the submit button
-        document.getElementById('submit-button').disabled = true;
       });
       function loading() {
         document.body.classList.add("test");

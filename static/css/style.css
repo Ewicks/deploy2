@@ -906,6 +906,11 @@ tr:hover {
     margin-top: 30px;
 }
 
+.view-element:hover {
+    text-decoration: underline;
+
+}
+
 .footer-img {
     width: 100%;
     height: 300px;

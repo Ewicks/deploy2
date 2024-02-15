@@ -126,7 +126,6 @@ def woking_bot(startdate, enddate, wordlist):
             for tr in applicant_name_tr:
                 tr_text = tr.text
                 if 'Applicant Name' in tr_text:
-                    print('bingo')
                     td = tr.find('td')
                     if td is not None:
                         name_list.append(td.text)

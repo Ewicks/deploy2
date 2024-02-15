@@ -78,6 +78,7 @@
               method="POST"
               action="{% url 'bots' %}"
               class="d-flex flex-column align-items-center justify-content-center"
+              id="botForm"
             >
               {% csrf_token %}
               <div class="d-flex justify-content-center align-items-center">
@@ -95,5 +96,19 @@
         </div>
       </div>
     </div>
+    <div id="loading-overlay">
+      <div class="loading-spinner"></div>
+    </div>
   </body>
 </html>
+
+<script>
+  document.getElementById('botForm').addEventListener('submit', function() {
+    // Show loading overlay when the form is submitted
+    document.getElementById('loading-overlay').style.display = 'block';
+
+  });
+  function loading() {
+    document.body.classList.add("test");
+  }
+</script>
