@@ -13,7 +13,6 @@ import os
 
 
 def richmond_bot(startdate, enddate, wordlist):
-    print('lol')
 
     def format_address(addresss):
         formatted_address = addresss.replace('\n', ' ')
@@ -41,8 +40,8 @@ def richmond_bot(startdate, enddate, wordlist):
     words_search_for = words.rstrip(words[-1])
     print(startdate)
     print(enddate)
-    parsed_startdate = pd.to_datetime(startdate, format='%Y/%m/%d')
-    parsed_enddate = pd.to_datetime(enddate, format='%Y/%m/%d')
+    parsed_startdate = pd.to_datetime(startdate, format="%Y-%m-%d")
+    parsed_enddate = pd.to_datetime(enddate, format="%Y-%m-%d")
     reversed_startdate = parsed_startdate.strftime('%d/%m/%Y')
     reversed_enddate = parsed_enddate.strftime('%d/%m/%Y')
 
