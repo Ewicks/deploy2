@@ -33,7 +33,8 @@ ALLOWED_HOSTS = [
     'test234234234.herokuapp.com',
     'test234234234-7852e70bd9ce.herokuapp.com',
     'localhost',
-    '127.0.0.1'
+    '127.0.0.1',
+    'www.boroughsearch.co.uk',
 ]
 
 
