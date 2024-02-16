@@ -23,7 +23,7 @@ body {
 }
 
 .number-btn:hover {
-    color: white;
+    color: white !important;
     background-color: rgba(138, 84, 255, .5);
 }
 
@@ -566,10 +566,9 @@ span i {
 /* pricing page */
 
 
-
 .pricing-card {
     width: 90%;
-    height: 700px;
+    height: 600px;
     border-radius: 10px;
     background-color: #E9E8E8;
     padding: 10px 40px;

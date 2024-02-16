@@ -23,7 +23,7 @@ body {
 }
 
 .number-btn:hover {
-    color: white;
+    color: white !important;
     background-color: rgba(138, 84, 255, .5);
 }
 
@@ -91,23 +91,40 @@ header {
     margin: auto 0px;
 } */
 
+.point {
+    display: flex;
+    align-items: center;
+}
+
 .point i {
-    position: absolute;
+    margin-right: 8px;
     color: rgb(131, 31, 231) !important;
 }
 
-@media (max-width: 707px) {
+.primary-navigation a:hover {
+    color: rgb(138, 84, 255);
+}
+
+@media (max-width: 940px) {
     .primary-navigation {
         gap: 3rem;
         position: fixed;
-        inset: 0 0 0 30%;
+        inset: 0 0 0 40%;
         flex-direction: column;
         padding: min(30vh, 10rem) 2em;
-        background: hsl(0 0% 100% / 0.1);
-        backdrop-filter: blur(.5em);
+        background: #f0f0f0; /* Solid gray background color */
         z-index: 1000;
         transform: translateX(100%);
         transition: transform 350ms ease-out;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .primary-navigation a {
+        color: black;
+        font-weight: 600;
+
     }
 
     .primary-navigation[data-visable='false'] {
@@ -124,7 +141,6 @@ header {
         position: absolute;
         border: 0;
         background-color: #fcf6f4;
-        width: 2rem;
         aspect-ratio: 1;
         top: 1rem;
         right: 2rem;
@@ -138,7 +154,7 @@ header {
     }
 }
 
-@media (min-width: 35em) and (max-width: 55em){
+@media (max-width: 1000px){
     .primary-navigation a > span[aria-hidden] {
         display: none;
     }
@@ -550,10 +566,9 @@ span i {
 /* pricing page */
 
 
-
 .pricing-card {
     width: 90%;
-    height: 700px;
+    height: 600px;
     border-radius: 10px;
     background-color: #E9E8E8;
     padding: 10px 40px;
