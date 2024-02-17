@@ -49,8 +49,8 @@ def elmbridge_bot(startdate, enddate, wordlist):
     name_list = []
     data = []
 
-    parsed_startdate = pd.to_datetime(startdate, format='%Y/%m/%d')
-    parsed_enddate = pd.to_datetime(enddate, format='%Y/%m/%d')
+    parsed_startdate = pd.to_datetime(startdate, format="%Y-%m-%d")
+    parsed_enddate = pd.to_datetime(enddate, format="%Y-%m-%d")
     reversed_startdate = parsed_startdate.strftime('%d/%m/%Y')
     reversed_enddate = parsed_enddate.strftime('%d/%m/%Y')
     print(reversed_startdate)
