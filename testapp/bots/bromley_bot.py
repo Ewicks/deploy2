@@ -14,6 +14,7 @@ import time
 import pprint
 import requests
 import urllib3
+import os
 
 # bug: instead of searching for a tag name be more specific so if two rows have the same name it won duplicate.
 def bromley_bot(startdate, enddate, wordlist):
@@ -52,9 +53,18 @@ def bromley_bot(startdate, enddate, wordlist):
     print(reversed_startdate)
     print(reversed_enddate)
 
-    # Set up the WebDriver (you may need to provide the path to your chromedriver executable)
     chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument('headless')
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("--no-sandbox")
+    
+    # Set Chrome binary location from environment variable
+    chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+
+    # Initialize WebDriver
+    # driver = webdriver.Chrome(options=chrome_options)
+    # chrome_options = webdriver.ChromeOptions()
+    # chrome_options.add_argument('headless')
     driver = webdriver.Chrome(options=chrome_options)
 
 
