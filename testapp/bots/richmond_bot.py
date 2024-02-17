@@ -53,7 +53,7 @@ def richmond_bot(startdate, enddate, wordlist):
 
 
     # Set up the WebDriver (you may need to provide the path to your chromedriver executable)
-    chrome_options = webdriver.ChromeOptions()
+    chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--no-sandbox")
