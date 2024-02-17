@@ -59,10 +59,10 @@ def richmond_bot(startdate, enddate, wordlist):
     chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 
     # Initialize WebDriver
-    driver = webdriver.Chrome(options=chrome_options)
+    # driver = webdriver.Chrome(options=chrome_options)
     # chrome_options = webdriver.ChromeOptions()
     # chrome_options.add_argument('headless')
-    # driver = webdriver.Chrome(options=chrome_options)
+    driver = webdriver.Chrome(options=chrome_options)
 
 
     url = 'https://www2.richmond.gov.uk/lbrplanning/Planning_Report.aspx'
