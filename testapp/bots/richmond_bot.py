@@ -10,6 +10,7 @@ import re
 from selenium.webdriver import DesiredCapabilities
 from selenium.webdriver.chrome.options import Options
 import os
+import urllib3
 
 
 def richmond_bot(startdate, enddate, wordlist):
@@ -35,6 +36,8 @@ def richmond_bot(startdate, enddate, wordlist):
     address_list = []
     name_list = []
     data = []
+    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
    
     words = convert(wordlist)
     words_search_for = words.rstrip(words[-1])
@@ -60,8 +63,8 @@ def richmond_bot(startdate, enddate, wordlist):
 
     # Initialize WebDriver
     # driver = webdriver.Chrome(options=chrome_options)
-    # chrome_options = webdriver.ChromeOptions()
-    # chrome_options.add_argument('headless')
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument('headless')
     driver = webdriver.Chrome(options=chrome_options)
 
 
