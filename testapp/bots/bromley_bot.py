@@ -19,6 +19,9 @@ import os
 # bug: instead of searching for a tag name be more specific so if two rows have the same name it won duplicate.
 def bromley_bot(startdate, enddate, wordlist):
 
+     # Access the API key
+    API_KEY = os.getenv('API-KEY', '')
+
 
     def convert(s):
     
@@ -135,7 +138,13 @@ def bromley_bot(startdate, enddate, wordlist):
             a_tag = row.find('a')
             href_value = a_tag.get('href')
             test_url = (f'{base_url}{href_value}')
-            summary_page = requests.get(test_url, verify=False)
+            summary_page = requests.get(
+                url='https://app.scrapingbee.com/api/v1/',
+                params={
+                    'api_key': API_KEY,
+                    'url': test_url,  
+                },
+            )
             summary_soup = BeautifulSoup(summary_page.content, "html.parser")
             info_tab = summary_soup.find(id='subtab_details')
             info_href = info_tab.get('href')

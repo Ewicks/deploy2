@@ -21,6 +21,7 @@ if os.path.isfile('env.py'):
 # bug: instead of searching for a tag name be more specific so if two rows have the same name it won duplicate.
 def kensington_chelsea_bot(startdate, enddate, wordlist):
 
+
     API_KEY = os.getenv('API-KEY', '')
 
     def convert(s):
@@ -132,16 +133,16 @@ def kensington_chelsea_bot(startdate, enddate, wordlist):
             a_tag = row.find('a')
             href_value = a_tag.get('href')
             next_url = (f'{base_url}{href_value}')
-            summary_page = requests.get(next_url, verify=False)
-            # summary_page = requests.get(
-            #     url='https://app.scrapingbee.com/api/v1/',
-            #     cookies= {"_ga_ZNLJF35KPL":"GS1.1.1706998240.1.0.1706998240.0.0.0"},
+            # summary_page = requests.get(next_url, verify=False)
+            summary_page = requests.get(
+                url='https://app.scrapingbee.com/api/v1/',
+                cookies= {"_ga_ZNLJF35KPL":"GS1.1.1706998240.1.0.1706998240.0.0.0"},
 
-            #     params={
-            #         'api_key': API_KEY,
-            #         'url': next_url,  
-            #     },
-            # )
+                params={
+                    'api_key': API_KEY,
+                    'url': next_url,  
+                },
+            )
             next_page_soup = BeautifulSoup(summary_page.content, "html.parser")
             applicant_section = next_page_soup.find('table', id='applicant-details')
             applicant_tr = applicant_section.find_all('tr')[0]

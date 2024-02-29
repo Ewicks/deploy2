@@ -14,9 +14,15 @@ import time
 import pprint
 import requests
 import urllib3
+import os
+if os.path.isfile('env.py'):
+    import env
 
 # bug: instead of searching for a tag name be more specific so if two rows have the same name it won duplicate.
 def southwark_bot(startdate, enddate, wordlist):
+
+    # Access the API key
+    API_KEY = os.getenv('API-KEY', '')
 
 
     def convert(s):
@@ -123,12 +129,26 @@ def southwark_bot(startdate, enddate, wordlist):
             a_tag = row.find('a')
             href_value = a_tag.get('href')
             test_url = (f'{base_url}{href_value}')
-            summary_page = requests.get(test_url, verify=False)
+            # summary_page = requests.get(test_url, verify=False)
+            summary_page = requests.get(
+                url='https://app.scrapingbee.com/api/v1/',
+                params={
+                    'api_key': API_KEY,
+                    'url': test_url,  
+                },
+            )
             summary_soup = BeautifulSoup(summary_page.content, "html.parser")
             info_tab = summary_soup.find(id='subtab_details')
             info_href = info_tab.get('href')
             info_atag = (f'{base_url}{info_href}')
-            further_info = requests.get(info_atag, verify=False)
+            # further_info = requests.get(info_atag, verify=False)
+            further_info = requests.get(
+                    url='https://app.scrapingbee.com/api/v1/',
+                    params={
+                        'api_key': API_KEY,
+                        'url': info_atag,  
+                    },
+                )
             further_info_soup = BeautifulSoup(further_info.content, "html.parser")
             applicant_row = further_info_soup.find('th', string='Applicant Name').find_next('td')
             applicant_name = applicant_row.get_text(strip=True)

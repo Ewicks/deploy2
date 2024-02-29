@@ -135,6 +135,13 @@ def elmbridge_bot(startdate, enddate, wordlist):
         info_href = info_a_tag.get('href')
         link_atag = (f'{base_url}{info_href}')
         further_info = requests.get(link_atag, verify=False)
+        # further_info = requests.get(
+        #             url='https://app.scrapingbee.com/api/v1/',
+        #             params={
+        #                 'api_key': API_KEY,
+        #                 'url': link_atag,  
+        #             },
+        #     )
         further_info_soup = BeautifulSoup(further_info.content, "html.parser")
         name_section = further_info_soup.find('div', class_='atLeftPanel')
         try:
