@@ -355,12 +355,17 @@ a {
 }
 
 .back-btn {
-    background-color: black;
-    color: white !important;
+    background-color: white;
+    color: black !important;
     margin: 20px;
     text-align: center;
-    border: 2px white solid;
+    border: 1px black solid;
     cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: black;
+    color: white ;
 }
 
 
@@ -373,7 +378,7 @@ a {
     height: 100vh;
     padding: 20px;
     width: 100%;
-    background-color: #090b0f;
+    /* background-color: #090b0f; */
 }
 
 #id_enddate {

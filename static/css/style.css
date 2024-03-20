@@ -348,19 +348,38 @@ a {
 .search-btn {
     margin-left: 30px;
     background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+.search-btn:hover {
+    background-color: black;
+    color: white;
 }
 
 .submit-btn {
     background-color: #fff;
+    color: black;
+    border: 1px solid black;
+}
+
+.submit-btn:hover {
+    background-color: black;
+    color: white;
 }
 
 .back-btn {
-    background-color: black;
-    color: white !important;
+    background-color: white;
+    color: black !important;
     margin: 20px;
     text-align: center;
-    border: 2px white solid;
+    border: 1px black solid;
     cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: black;
+    color: white ;
 }
 
 
@@ -373,7 +392,7 @@ a {
     height: 100vh;
     padding: 20px;
     width: 100%;
-    background-color: #090b0f;
+    /* background-color: #090b0f; */
 }
 
 #id_enddate {
@@ -929,6 +948,8 @@ tr:hover {
 .item-row {
     display: flex;
     align-items: center; /* Align items vertically */
+    color: black !important;
+    background-color: white !important;
 }
 
 .item-row span {
